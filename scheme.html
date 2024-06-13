@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="scheme.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="heading">
+            <div class="clock">
+                <div id="date"></div>
+                <hr style="height: 0.8rem;">
+                <div id="time"></div>
+            </div>
+            <div class="rightheading">
+                <div><a href="#">Skip to Navigation</a></div>
+                <hr style="height: 0.8rem;">
+                <div><a href="#">Skip to Main Content</a></div>
+            </div>
+        </div>
+    
+        <div class="imageheading">
+            <div class="head">
+                <img src="public/image/satyam.png" alt="" class="image">
+                <div>
+                    <div class="jan"><b>Jan Shikshan Sansthan Sonepur Saran</b></div><br>
+                    <div class="para"> Ministry of Skill Development & Enterpreneurship, Government of India</div><hr class="line">
+                    <div class="para">Scheme of support to Student for Skill Development</div>
+                </div>
+            </div>
+            <div class="head_2">
+                <img src="public/image/sk.jpg" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/jan-removebg-preview.png" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/g.png" alt="" class="image1">
+            </div>
+           
+        </div>
+    
+        <nav class="navbar">
+            <button class="navbar-toggler" onclick="toggleNavbar()">☰</button>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-link" href="index.html">Home</a>
+                
+                <a class="nav-link" href="scheme.html">About Us</a>
+                
+                <a class="nav-link" href="course.html">Courses Offered</a>
+                
+                <a class="nav-link" href="#">Resources</a>
+                
+                <a class="nav-link" href="registration.html">Training Request</a>
+                
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </div>
+            <div>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </nav>
+
+
+        <div class="paragraph">
+            <h1>JSS Scheme</h1>
+            <p>
+                The Scheme of Jan Shikshan Sansthan (JSS) formerly known as
+                Shramik Vidyapeeth was a unique creation of Government of India
+                is being implemented through NGOs in the country since 1967.
+                The scheme was renamed as Jan Shikshan Sansthan in 2000.
+                JSS scheme was transferred from Ministry of Education (erstwhile
+                Ministry of Human Resource Development) to Ministry of Skill
+                Development & Entrepreneurship in July, 2018.
+            </p>
+            <p>
+                At present, 290 JSSs in 26 States and 7 Union Territories are
+                functional. The annual coverage of the beneficiaries is around 4
+                lakh, out of which 85% are women.
+            </p>
+            <p>
+                Jan Shikshan Sansthan (JSS) scheme is implemented through NGOs
+                with 100% grants from the Government of India.
+                Jan Shikshan Sansthans are registered under the Societies
+                Registration Act, 1860.
+                The affairs of Jan Shikshan Sansthan are managed by respective
+                Board of Management approved by the Government of India.
+            </p>
+            <p>The mandate of the scheme is to provide vocational skills in
+                non-formal mode to non-literate, neo-literates, persons with
+                rudimentary level of education upto 8th and school drop-outs
+                upto 12th standard in the age group of 15-45 years.
+                The priority groups are women, SC, ST, minorities and other
+                backward sections of the society.
+                JSSs are reaching to the unreached areas to cater the needs of
+                the poorest of the poor.
+                They work at the door step of the beneficiaries with a minimum
+                infrastructure and resources.</p>
+        </div>
+    </body>
+
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+    
+            // Format date
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+    
+            // Format time
+            const formattedTime = now.toLocaleTimeString();
+    
+            // Update the content of the divs
+            document.getElementById('date').textContent = formattedDate;
+            document.getElementById('time').textContent = formattedTime;
+        }
+    
+        // Update time immediately on page load
+        updateTime();
+    
+        // Update time every second
+        setInterval(updateTime, 1000);
+    
+        function toggleNavbar() {
+                var nav = document.getElementById('navbarNav');
+                nav.classList.toggle('active');
+            }
+    
+        
+    </script>
+</html>

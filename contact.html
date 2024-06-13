@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+
+        <div class="heading">
+            <div class="clock">
+                <div id="date"></div>
+                <hr style="height: 0.8rem;">
+                <div id="time"></div>
+            </div>
+            <div class="rightheading">
+                <div><a href="#">Skip to Navigation</a></div>
+                <hr style="height: 0.8rem;">
+                <div><a href="#">Skip to Main Content</a></div>
+            </div>
+        </div>
+    
+        <div class="imageheading">
+            <div class="head">
+                <img src="public/image/satyam.png" alt="" class="image">
+                <div>
+                    <div class="jan"><b>Jan Shikshan Sansthan Sonepur Saran</b></div><br>
+                    <div class="para"> Ministry of Skill Development & Enterpreneurship, Government of India</div><hr class="line">
+                    <div class="para">Scheme of support to Student for Skill Development</div>
+                </div>
+            </div>
+            <div class="head_2">
+                <img src="public/image/sk.jpg" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/jan-removebg-preview.png" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/g.png" alt="" class="image1">
+            </div>
+           
+        </div>
+    
+        <nav class="navbar">
+            <button class="navbar-toggler" onclick="toggleNavbar()">☰</button>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-link" href="index.html">Home</a>
+                
+                <a class="nav-link" href="scheme.html">About Us</a>
+                
+                <a class="nav-link" href="course.html">Courses Offered</a>
+                
+                <a class="nav-link" href="#">Resources</a>
+                
+                <a class="nav-link" href="registration.html">Training Request</a>
+                
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </div>
+            <div>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </nav>
+
+        <div class="parent">
+            <div class="container_1">
+                <h1>Get In Touch</h1>
+                <p>Have any query or suggestion? We'd love to hear from you.</p>
+                <p> <span class="ast">*</span>All fields are mandatory.</p>
+                <form action>
+                    <div class="name">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="firstname" required
+                                placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="lastname" required
+                                placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    <div class="name">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" required
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileno">Mobile Number</label>
+                            <input type="text" name="mobileno" required
+                                placeholder="Enter your mobile number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query">Query/ Suggestion*</label>
+                        <div class="full">
+                            <textarea name id cols="30" rows="10"
+                                placeholder="Messege"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="submit">Submit</button>
+                        <button type="reset" class="reset">Cancle</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container_2">
+                <center><img src="public/image/social.jpg" alt class="social"></center>
+                <h2>Address</h2>
+                <p>Gandhi Swaraj Ashram Campus , Sonepur,
+
+                    SONEPUR - 841101,
+
+                    SARAN (Bihar)
+                </p>
+                <div>E-Mail: jsssonepursaran@gmail.com</div>
+                <div>Mobile Number: +91 7909078570</div>
+
+            </div>
+        </div>
+
+
+        <script>
+            function updateTime() {
+                const now = new Date();
+        
+                // Format date
+                const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                const formattedDate = now.toLocaleDateString('en-US', options);
+        
+                // Format time
+                const formattedTime = now.toLocaleTimeString();
+        
+                // Update the content of the divs
+                document.getElementById('date').textContent = formattedDate;
+                document.getElementById('time').textContent = formattedTime;
+            }
+        
+            // Update time immediately on page load
+            updateTime();
+        
+            // Update time every second
+            setInterval(updateTime, 1000);
+        
+            function toggleNavbar() {
+                    var nav = document.getElementById('navbarNav');
+                    nav.classList.toggle('active');
+                }
+        
+            
+        </script>
+
+    </body>
+</html>

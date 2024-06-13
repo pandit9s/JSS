@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="course.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="heading">
+            <div class="clock">
+                <div id="date"></div>
+                <hr style="height: 0.8rem;">
+                <div id="time"></div>
+            </div>
+            <div class="rightheading">
+                <div><a href="#">Skip to Navigation</a></div>
+                <hr style="height: 0.8rem;">
+                <div><a href="#">Skip to Main Content</a></div>
+            </div>
+        </div>
+    
+        <div class="imageheading">
+            <div class="head">
+                <img src="public/image/satyam.png" alt="" class="image">
+                <div>
+                    <div class="jan"><b>Jan Shikshan Sansthan Sonepur Saran</b></div><br>
+                    <div class="para"> Ministry of Skill Development & Enterpreneurship, Government of India</div><hr class="line">
+                    <div class="para">Scheme of support to Student for Skill Development</div>
+                </div>
+            </div>
+            <div class="head_2">
+                <img src="public/image/sk.jpg" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/jan-removebg-preview.png" alt="" class="image">
+                <div><hr style="height: 6rem;"></div>
+                <img src="public/image/g.png" alt="" class="image1">
+            </div>
+           
+        </div>
+    
+        <nav class="navbar">
+            <button class="navbar-toggler" onclick="toggleNavbar()">☰</button>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-link" href="index.html">Home</a>
+                
+                <a class="nav-link" href="scheme.html">About Us</a>
+                
+                <a class="nav-link" href="course.html">Courses Offered</a>
+                
+                <a class="nav-link" href="#">Resources</a>
+                
+                <a class="nav-link" href="registration.html">Training Request</a>
+                
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </div>
+            <div>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <h1>COURSES OFFERED</h1>
+            <p>
+                The courses offered in the JSS are a blend of technical and employability skills. This enables the beneficiaries in learning the right set of skills to be utilised for gainful self/wage employment. The Directorate of JSS (DJSS) has developed suitable job roles for the JSS clientele. The National Council for Vocational Education and Training (NCVET) has approved 15 Qualifications / Courses for the JSS scheme, which have been aligned with NSQF levels 2 and 3.
+            </p>
+            <p>
+                Further, in view of the local market demand and geographical requirements, and to cater the beneficiaries with suitable courses, 35 more NSQF-aligned courses of level 2 have been adopted for training during FY 2023-24.
+            </p>
+            <p>
+                JSSs now offer 9 courses, which have local market demand in the field. The said 9 courses have domain skills knowledge of 135-360 hours and employability skills of 60 hours. The sector-wise details of the courses being offered under the JSS scheme are as below:
+            </p>
+            <div class="course-list">
+                <div class="course-item">Organised Retail</div>
+                <div class="course-item">Apparel, Made Ups and Home Furnishing</div>
+                <div class="course-item">Beauty and Wellness</div>
+                <div class="course-item">Electronics and Hardware</div>
+                <div class="course-item">Food Processing</div>
+                <div class="course-item">IT-ITES</div>
+                <div class="course-item">Handicrafts and Carpet</div>
+                <div class="course-item">Textiles and Handlooms</div>
+                <div class="course-item">Handicrafts and Carpet</div>
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+    
+            // Format date
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+    
+            // Format time
+            const formattedTime = now.toLocaleTimeString();
+    
+            // Update the content of the divs
+            document.getElementById('date').textContent = formattedDate;
+            document.getElementById('time').textContent = formattedTime;
+        }
+    
+        // Update time immediately on page load
+        updateTime();
+    
+        // Update time every second
+        setInterval(updateTime, 1000);
+    
+        function toggleNavbar() {
+                var nav = document.getElementById('navbarNav');
+                nav.classList.toggle('active');
+            }
+    
+        
+    </script>
+</html>

@@ -1,0 +1,48 @@
+/* scheme.css */
+
+body {
+    /* font-family:Arial, Helvetica, sans-serif; */
+    background-color: #f4f4f9;
+    /* color: #333; */
+    /* line-height: 1.6; */
+    margin: 0;
+    padding: 0;
+}
+
+.paragraph {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 2rem;
+    background: aliceblue;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgb(132, 131, 127);
+}
+
+h1 {
+    
+    color: #0073e6;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+}
+
+p {
+   
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+@media (max-width: 800px) {
+    .paragraph {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
